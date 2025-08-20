@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 2 - Introdução ao HTML V2</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .classe1 {
+            color: blue;
+            font-size: 20px;
+            border: 2px solid black;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,14 +20,70 @@
         <h1>Bem-vindo à Aula 2</h1>
         <p>Esta é a segunda aula do curso de HTML. Hoje serão os conceitos básicos do Java Script.</p>
     </DIv>
-    <script>
+    <!-- <script>//Exercicio 1
         var numero = 5;
         if (numero % 2 == 0) { //se o numero for positivo 
             console.log("O numero"+ numero,"é par")//chamando a variavel para o comit
+            document.writeln("O numero",numero,"é par")
         } else{//se for impar
             console.log("O numero"+numero, "é impar")
+            document.writeln("O numero",numero,"é impar")
         }
         console.clear
+    </script> -->
+    <!-- <script> //Exercicio 2
+        var n1 = 8.1;
+        var n2 = 7.5;
+        var n3 = 6.9;
+        let media = (n1 + n2 + n3) / 3;
+        var parecer = "";
+        if (media >= 7) {
+            parecer = "Aprovado";
+            alert("Aluno Aprovado com a media de "+ media +" pontos")
+            //Até onde vi o alert não funciona direto para concatenar com "," recomendo com "+" ou com template string
+        } else if (media >= 5 && media < 7) {
+            parecer = "Recuperação";
+            alert("Aluno em Recuperação com a media de "+ media+" pontos")
+        } else {
+            parecer = "Reprovado";
+            alert("Aluno Reprovado com a media de "+ media.toFixed(2)+ " pontos")//definir o numero de casas decimais
+        }
+    </script> -->
+    <script>  //Exercicio 3
+        /*
+                let tabuada = prompt("Digite um número para ver a tabuada: ");
+                if (tabuada !== null && tabuada !== "") {//verifica se o usuário digitou algo
+                    document.writeln("Tabuada do " + tabuada + ":<br>");//O <br> é usado para quebrar a linha no HTML
+                    for (var j = 0; j <= 10; j++) {
+                        document.writeln(tabuada + " x " + j + " = " + (tabuada * j) + "<br>");
+                    }
+                } else {
+                    document.writeln("Maluco comedia da porra em, para de graça e coloca o número.<br>");
+                }
+                document.writeln("<br>Tabuada do 1 ao 10<br>"); //Repete todas as tabuadas de 1 a 10
+                for (var i = 1; i <= 10; i++) {
+                    document.writeln("<div class='classe1'>Tabuada do " + i + ":<br>");
+                    for (var j = 0; j <= 10; j++) {
+                        document.writeln(i + " x " + j + " = " + (i * j) + "<br>");
+                    }
+                    document.writeln("</div>"); // Fecha a div para cada tabuada
+                }*/
+
+        for (var i = 1; i <= 10; i++) {
+            var j = 0; // Initialize the counter variable
+            while (j <= 10) {
+                document.writeln("<div class='classe1'>Tabuada do " + i + ":<br>");
+                document.writeln(i + " x " + j + " = " + (i * j) + "<br>");
+                j++; // Increment the counter
+            }
+            document.writeln("</div>"); // Close the div for each tabuada
+        }
+        document.writeln("<div class='classe1'>Tabuada do " + j + ":<br>");
+        document.writeln(i + " x " + j + " = " + (i * j) + "<br>");
+        if (j === 10) {
+            document.writeln("</div>");
+        }
+
     </script>
 </body>
 
