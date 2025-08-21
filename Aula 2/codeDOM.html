@@ -22,11 +22,13 @@
     
     <br>
     <button onclick="corAleatoria">Cor Aleatória</button>
+    <button id="sm" onclick="somar">0</button>
 
     <script>
-        function mudarCorFundo(id, cc) {
+        var contagem = 0;
+        /*function mudarCorFundo(id, cc) {
             document.getElementById(id).style.backgroundColor = cc;
-        }
+        }*/
         function corAleatoria(){
             var c = document.getElementById("corpo"); 
             var r, g, b;
@@ -35,6 +37,11 @@
             b = Math.floor(Math.random() * 256);
             c.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")"; //Gerando uma cor aleatória em RGB
         }
+        function somar(){
+            contagem++;    
+            document.getElementById("sm").innerHTML = contagem;
+        }
+        
         document.getElementById("texto").innerHTML = "CodeDOM - Manipulação de Código com JavaScript";
         //Adicionar o texto dentro do h1 usando o id "texto"
         document.getElementById("texto").style.color = "red";//mudando a cor do texto para vermelho
@@ -45,14 +52,6 @@
         p.style.backgroundColor = "yellow";
         document.getElementById("corpo").style.backgroundColor = "gray";
         //Mudando a cor de fundo da pagina o corpo
-        var video = document.createElement("iframe");
-        video.src = "https://www.youtube.com/watch?v=maJxBSTzcUc";
-        video.width = "560";
-        video.height = "315";
-        video.frameBorder = "0";
-        video.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-        video.allowFullscreen = true;
-        document.getElementById("corpo").appendChild(video);
     </script>
 </body>
 
