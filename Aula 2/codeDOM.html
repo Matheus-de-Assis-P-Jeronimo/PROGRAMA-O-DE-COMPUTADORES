@@ -1,19 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-br">   
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CodeDOM</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js" defer></script>
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-    </head>
-    <body>
-        <h1 id="texto"></h1>
+<html lang="pt-br">
 
-        <script>
-            document.getElementById("texto").innerHTML = "CodeDOM - Manipulação de Código com JavaScript";
-            //Adicionar o texto dentro do h1 usando o id "texto"
-        </script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeDOM</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body id="corpo">
+    <h1 id="texto" onclick=""></h1>
+    <p id="frase"></p>
+    <iframe src="https://www.youtube.com/embed/maJxBSTzcUc" width="560" height="315" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <br>
+    <br>
+    <button onclick="mudarCorFundo('corpo', 'black')">Trocar a cor de fundo</button>
+    
+    <br>
+    <button onclick="corAleatoria">Cor Aleatória</button>
+
+    <script>
+        function mudarCorFundo(id, cc) {
+            document.getElementById(id).style.backgroundColor = cc;
+        }
+        function corAleatoria(){
+            var c = document.getElementById("corpo"); 
+            var r, g, b;
+            r = Math.floor(Math.random() * 256); 
+            g = Math.floor(Math.random() * 256);
+            b = Math.floor(Math.random() * 256);
+            c.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")"; //Gerando uma cor aleatória em RGB
+        }
+        document.getElementById("texto").innerHTML = "CodeDOM - Manipulação de Código com JavaScript";
+        //Adicionar o texto dentro do h1 usando o id "texto"
+        document.getElementById("texto").style.color = "red";//mudando a cor do texto para vermelho
+        var p = document.getElementById("frase");
+        //Reduzi toda a linha para ser representada somente por uma variavel curta
+        p.innerHTML = "Uma frase de exemplo..."; //E estou usando ela para as modificações
+        p.style.color = "blue";//podendo mudar e usar igual a outra pq ela é a outra
+        p.style.backgroundColor = "yellow";
+        document.getElementById("corpo").style.backgroundColor = "gray";
+        //Mudando a cor de fundo da pagina o corpo
+        var video = document.createElement("iframe");
+        video.src = "https://www.youtube.com/watch?v=maJxBSTzcUc";
+        video.width = "560";
+        video.height = "315";
+        video.frameBorder = "0";
+        video.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        video.allowFullscreen = true;
+        document.getElementById("corpo").appendChild(video);
+    </script>
+</body>
+
 </html>
