@@ -1,30 +1,30 @@
-function dica(){
 
-    var frases = [
-        "Programar é errar rápido para aprender rápido.",
-        "Todo grande programador já começou com um 'Hello, World!'.",
-        "Um erro de sintaxe hoje é um aprendizado amanhã.",
-        "Não tenha medo do bug, ele é seu professor disfarçado.",
-        "Quem nunca esqueceu um ponto e vírgula não programou de verdade.",
-        "A lógica é a base, a linguagem é apenas a ferramenta.",
-        "O computador só faz exatamente o que você manda — e esse é o problema. 😅",
-        "Cada linha de código escrita é um passo rumo à fluência digital.",
-        "Debugar é como ser um detetive em um crime que você mesmo cometeu.",
-        "Errar faz parte: até o Google já caiu por causa de um código errado.",
-        "Não existe código perfeito, existe código funcionando (e bem explicado).",
-        "Aprender a programar é como aprender uma língua nova: prática todo dia.",
-        "Um bom programador transforma café em código. ☕💻",
-        "Primeiro faça funcionar, depois melhore o código.",
-        "Lembre-se: até os maiores softwares começaram pequenos."
-    ];
-    var nfrase = Math.floor(Math.random() * frases.length);
-    var d = document.getElementById("dica_do_dia");
-    d.innerHTML = "A dica do dia é: " + frases[nfrase];
 
-    for(var i=0; i<frases.length; i++){
+var frases = [
+    "Programar é errar rápido para aprender rápido.",
+    "Todo grande programador já começou com um 'Hello, World!'.",
+    "Um erro de sintaxe hoje é um aprendizado amanhã.",
+    "Não tenha medo do bug, ele é seu professor disfarçado.",
+    "Quem nunca esqueceu um ponto e vírgula não programou de verdade.",
+    "A lógica é a base, a linguagem é apenas a ferramenta.",
+    "O computador só faz exatamente o que você manda — e esse é o problema. 😅",
+    "Cada linha de código escrita é um passo rumo à fluência digital.",
+    "Debugar é como ser um detetive em um crime que você mesmo cometeu.",
+    "Errar faz parte: até o Google já caiu por causa de um código errado.",
+    "Não existe código perfeito, existe código funcionando (e bem explicado).",
+    "Aprender a programar é como aprender uma língua nova: prática todo dia.",
+    "Um bom programador transforma café em código. ☕💻",
+    "Primeiro faça funcionar, depois melhore o código.",
+    "Lembre-se: até os maiores softwares começaram pequenos."
+];
+var nfrase = Math.floor(Math.random() * frases.length);
+var d = document.getElementById("dica_do_dia");
+d.innerHTML = "A dica do dia é: " + frases[nfrase];
+
+for(var i=0; i<frases.length; i++){
         document.writeln("<div class='dica'>"+frases[i]+"</div><br>");
-    }
 }
+
     
 function iniciar_pagina (entrada){
     var h1 = document.getElementById("title");
