@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3 - Introdução da repartição de código</title>
+    <link rel="icon" href="proco.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="iniciar_pagina('Hello Word?'); dica();">
+    
+    <div class="dica">
+        <h1 id="dica_do_dia"></h1>
+    </div>
+
+    <h1 id="title"></h1>
+    <input type="text" onchange="iniciar_pagina(this.value)" placeholder="Digite algo">
+    <br>
+    <input type="color" onchange="mudar_cor(this.value)">
+    <br>
+    <button onclick="sorteio()"> Sorteio </button>
+    <br>
+    <samp id="resultado">...</samp>
+    <img id="dado" src="" alt="">
+    
+    <script src="script.js"></script>
+</body>
+</html>
